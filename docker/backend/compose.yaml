@@ -1,0 +1,61 @@
+version: "3.8"
+services:
+  loadbalancer: # Name of the service: loadbalancer
+    build:
+      context: ../MyWebDevJourney-Nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080 # open the container port 8080 and map it to the host port 8080 so that request can access the LB nginx
+      # You are required to open the port for LB because it is the only container that is exposed to the outside world. So you will need to allow request from
+      # Outside world to access the LB container then any request made internally after the LB does not require any port opening
+    depends_on:
+     - backend
+    networks:
+     - loadbalancing
+  backend: # Name of the service: backend, The name of the backend is very important for the LB to work. LB requires the name of the container to proxy to
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      target: development # Set the DEV/PROD environment using this
+    command: npm run dev # defaults to npm run start
+    environment: # Add environment variables here
+      - PORT=9999
+      - MONGO_URL_PROD= example.mongo.prod.com
+    networks: # Connect to a network so you dont have to declare the ports
+      - loadbalancing
+    volumes: # Store/Save the node_modules in a volume so that it can be shared between containers
+      - ./src:/code/src:ro
+      - ./package.json:/code/package.json
+      - ./package-lock.json:/code/package-lock.json
+      - ./back-notused:/opt/app/node_modules
+    restart: always
+
+  # You only need this frontend, if you are using the provided react-vite server, else usually, you will be npm run build in order to get the static files and serve it with nginx
+  frontend:
+    build:
+      context: ../<Folder_name> # Describes the location of the image
+      dockerfile: Dockerfile # Name of the dockerfile to look for
+    ports:
+      - 5173:5173 # Port to open if you are not using a network
+    volumes:
+      - ./frontend/src:/code/src
+      - /code/node_modules
+    depends_on: # To run this only after the backend is up
+      - backend
+    command: npm run dev # Command to run when the container is created
+    restart: always # Restart the container if it crashes
+
+# Ports have limitations, 1 distinct port per container, if you want LB to have horizontal scaling you will need to configure each container to have a different port
+# There is so much work and configuration. If only there was a way to put all the containers behind a single port
+# This is where you can use a network, mark the container to a certain network and you dont even need to configure the ports
+# A network is like a larger container that encompasses all of the containers allowing them to communicate with each other without opening specific ports for each container
+
+# If you are using the networks feature, there is no need for ports.configs:
+  # network removes the need to consider the local containers that wrap around each server so we no longer need to map the ports.
+  # Imagine it as a large container that encompasses all of the containers and remove their own independent containers.
+networks:
+  loadbalancing:
+
+
+

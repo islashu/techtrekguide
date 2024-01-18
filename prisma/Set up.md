@@ -48,6 +48,12 @@ e.g. DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schem
 ## Applying changes to your database after editing schema.prisma
 ```
 npx prisma migrate dev --name <Name of migrate (Anything does not matter)>
-```
 
+npx prisma db push
+
+```
+## Reset/Drop database
+```
+npx prisma db push --force-reset
+```
 

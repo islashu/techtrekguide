@@ -14,7 +14,7 @@ model User {
   userId            Int               @id @default(autoincrement()) @map("employeeId")
   // @unique is required for .findUnique method to work
   userEmail         String            @unique @map("UserEmail") @db.VarChar(100)
-  password          String            @map("Password") @db.VarChar(100)
+  password          String            @map("Password") @db.VarChar(1)
   firstName         String            @map("FirstName") @db.VarChar(50)
   lastName          String            @map("LastName") @db.VarChar(50)
   age               Int               @map("Age")

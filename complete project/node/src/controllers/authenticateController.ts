@@ -24,13 +24,14 @@ const handleLogin = async (req: Request, res: Response, next: NextFunction) => {
     try {
         console.log(req.body)
         const userLogin: UserLogin = UserLoginSchema.parse(req.body);
+        //Please remember the await else if there is a prisma error it will not catch it
         const user = await findUser(userLogin.userEmail);
         const isPasswordValid = await validatePassword(userLogin.password, user.password);
         const isUsernameValid = await validateUsername(user.userEmail, userLogin.userEmail)
         if (!isPasswordValid) throw new Error('Invalid password');
         // User is valid, return JWT token
         const accessToken = issueAccessToken(user)
-        updateUserWithAccessToken(user.userEmail, accessToken)
+        await updateUserWithAccessToken(user.userEmail, accessToken)
         res.status(200).json({accessToken: accessToken})
     } catch (e) {
         console.log(e)
@@ -41,10 +42,11 @@ const handleRegister = async (req: Request, res: Response, next: NextFunction) =
     try {
         // If the req is missing anything, it will throw an error
         const user: User = UserSchema.parse(req.body);
-        const createdUser = createUser(user.firstName, user.lastName, user.age, user.userEmail, await genHashPassword(user.password));
+        const createdUser = await createUser(user.firstName, user.lastName, user.age, user.userEmail, await genHashPassword(user.password));
         res.status(201).json();
     } catch (e) {
         // Pass on to global error handler
+        console.log(e)
         next(e);
     }
 };

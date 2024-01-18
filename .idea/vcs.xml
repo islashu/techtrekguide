@@ -2,7 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/complete project/react" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/docker" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/git/techtrekguide" vcs="Git" />
   </component>
 </project>

@@ -1,0 +1,71 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+set visualbell
+set noerrorbells
+
+" Remove newbie crutches in Command Mode
+cnoremap <Down> <Nop>
+cnoremap <Left> <Nop>
+cnoremap <Right> <Nop>
+cnoremap <Up> <Nop>
+
+" Remove newbie crutches in Insert Mode
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+" Remove newbie crutches in Normal Mode
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
+" Remove newbie crutches in Visual Mode
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
+
+
+" turn relative line numbers on
+":set relativenumber "
+":set rnu"
+inoremap jj <Esc>
+
+
+
+
+noremap <Up> 10k
+noremap <Down> 10j
+
+nnoremap <a-j> <c-j>
+nnoremap <a-k> <c-k>
+
+noremap x "_x
+noremap X "_x
+noremap <Del> "_x
+
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+
+
+
+
+
+
+
+
+

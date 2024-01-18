@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId            Int               @id @default(autoincrement()) @map("employeeId")
+  // @unique is required for .findUnique method to work
+  userEmail         String            @unique @map("UserEmail") @db.VarChar(100)
+  password          String            @map("Password") @db.VarChar(100)
+  firstName         String            @map("FirstName") @db.VarChar(50)
+  lastName          String            @map("LastName") @db.VarChar(50)
+  age               Int               @map("Age")
+  insurancePolicies InsurancePolicy[]
+  accessToken       String?           @map("AccessToken") @db.VarChar(255)
+}
+
+model InsurancePolicy {
+  insuranceId         Int      @id @default(autoincrement()) @map("InsuranceId")
+  insuranceType       String   @map("InsuranceType") @db.VarChar(100)
+  policyStartDate     DateTime @default(now()) @map("PolicyStartDate")
+  policyTerm          String   @map("PolicyTerm") @db.VarChar(100)
+  policyEndDate       DateTime @map("PolicyEndDate")
+  claimLimit          Float    @default(0) @map("ClaimLimit")
+  remainingClaimLimit Float    @default(0) @map("RemainingClaimLimit")
+
+  // This is the column name for which to store the FK, This way of describing the schema is very similar to spring
+  insuranceUserId Int
+  // This describes the relationship only
+  user            User @relation(fields: [insuranceUserId], references: [userId])
+
+  // One to Many
+  insuranceClaims InsuranceClaim[]
+}
+
+model InsuranceClaim {
+  claimId             Int      @id @default(autoincrement()) @map("ClaimId")
+  firstName           String   @map("FirstName") @db.VarChar(50)
+  lastName            String   @map("LastName") @db.VarChar(50)
+  expenseDate         String   @map("ExpenseDate") @db.VarChar(255)
+  amount              Float
+  purpose             String   @db.VarChar(255)
+  followUp            Int
+  previousClaimId     Int
+  status              String   @db.VarChar(20)
+  LastEditedClaimDate DateTime
+
+  // Many to one
+  policyId        Int
+  insurancePolicy InsurancePolicy @relation(fields: [policyId], references: [insuranceId])
+}

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "strict": true,
+        "moduleDetection": "force",
+        "outDir": "dist",
+        "removeComments": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+    },
+    "exclude": ["node_modules"]
+}

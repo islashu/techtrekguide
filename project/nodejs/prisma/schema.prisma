@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Denotes the type of db we are using
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_DATABASE_URL")
+}
+
+// One employee -> many insurance policies
+model Role {
+  roleId       Int    @id @default(autoincrement())
+  roleName     String
+  users        User[]
+  roleFunction String
+
+  // Unable to use composite @@id without explicitly declaring the relationship
+}
+
+model User {
+  employeeId                Int                   @id @default(autoincrement())
+  firstName                 String                @map("FirstName") @db.VarChar(50)
+  lastName                  String                @map("LastName") @db.VarChar(50)
+  password                  String                @map("Password") @db.VarChar(20)
+  age                       Int                   @default(18) @map("Age")
+  createdAt                 DateTime              @default(now())
+  updatedAt                 DateTime              @updatedAt
+  version                   Int                   @default(autoincrement())
+  // Relationships
+  pendingInsurancePolicies  InsurancePolicies[]   @relation("pendingInsurancePolicy")
+  // A user can have many roles and each role can have many users
+  roles                     Role[]
+  approvedInsurancePolicies InsurancePolicies[]   @relation("approvedInsurancePolicy")
+  // One to One relationship
+  additionalDetails         AdditionalUserDetails @relation(fields: [employeeId], references: [id])
+}
+
+model InsurancePolicies {
+  insuranceId         Int               @id @default(autoincrement())
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+  version             Int               @default(1)
+  insuranceType       String            @db.VarChar(100)
+  policyStartDate     String            @default("now") @map("PolicyStartDate") @db.VarChar(255)
+  policyTerm          String            @default("1 year") @map("PolicyTerm") @db.VarChar(100)
+  policyEndDate       String            @default("2025") @map("PolicyEndDate") @db.VarChar(255)
+  claimLimit          Float             @default(300.00)
+  remainingClaimLimit Float             @default(1000)
+  // Relationships
+  // userId              Int
+  pendingUser         User              @relation("pendingInsurancePolicy", fields: [pendindUserId], references: [employeeId])
+  pendindUserId       Int
+  approvedUser        User              @relation("approvedInsurancePolicy", fields: [approvedUserId], references: [employeeId])
+  approvedUserId      Int
+  insuranceClaims     InsuranceClaims[]
+}
+
+// One way of doing this
+enum Status {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum FollowUp {
+  YES
+  NO
+}
+
+// One to one
+model AdditionalUserDetails {
+  id          Int    @id @default(autoincrement())
+  userId      Int    @unique
+  user        User?
+  nric        String @default("")
+  dateOfBirth String @default("")
+}
+
+// One to many relationship
+model InsuranceClaims {
+  claimId           Int               @id @default(autoincrement())
+  firstName         String            @db.VarChar(50)
+  lastName          String            @db.VarChar(50)
+  expenseDate       DateTime
+  amount            Float
+  purpose           String            @db.VarChar(255)
+  followUp          FollowUp
+  previousClaimID   Int
+  // Status            Status            @default(PENDING)
+  status            String            @db.VarChar(20)
+  lastEditClaimDate DateTime          @updatedAt
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  version           Int               @default(1)
+  // Relationships
+  policyId          Int
+  insurancePolicies InsurancePolicies @relation(fields: [policyId], references: [insuranceId])
+}

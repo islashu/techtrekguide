@@ -30,12 +30,12 @@ git add .
 ```
 
 ### Create a local branch
-```cookie
+```
 git branch <name>
 ```
 
 ### Checkout to that branch
-```cookie
+```
 git checkout <branch_name>
 ```
 
@@ -56,6 +56,13 @@ git branch -M master
 e.g. git remote add guide https://github.com/islashu/techtrekguide.git
 ```
 git remote add name <remote repository URL>
+git remote add origin git@github.com:[username]/[reponame].git
+```
+
+### Remove a remote repository
+```
+e.g. git remote remove origin
+git remote remove origin
 ```
 
 ### List all remote repositories using git
@@ -66,11 +73,12 @@ git remote -v (detailed version include which url it points to)
 ```
 
 ### Push to a remote repository
-git push -u <remote repo name> <branch>
+
 
 1. if you get an a error message like this: git error: failed to push some refs to remote, likely that you did not commit your changes before pushing. 
 2. If you have a permission error, 
 ```
+git push -u <remote repo> <name branch>
 git push -u origin master
 ```
 
@@ -87,7 +95,7 @@ Press q
 ### To set your git details using so that you may push to a remote repository
 ```
 git config --global user.name "Your Name"
-git config --global user.email ""
+git config --global user.email "Your email"
 ```
 
 If after setting your git details and you still cannot push, the repo owner may need to add you as a collaborator to the repo.

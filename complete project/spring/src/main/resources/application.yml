@@ -1,0 +1,31 @@
+server:
+    port: 8000
+
+spring:
+  jackson:
+    serialization:
+      # prevents serialization exception when lazy loading is used on relationships
+      fail-on-empty-beans: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: "xmDaJRRBV7odVzkujxuC13DXbV6HhKdf/OOa9MH6hkERhlgAVSqVqfWpkxD17Bh1nYvVaZfKR6KgioLcwQn1zyd6UL6FSQ2GMjhPnKDFBUGW53avDUz72oVNudi6nN3ZFFRojO1oOSQGwlT6xqWmRX4AvtphUE09Y1pdMwiBnTefkS9WUsyODXkTDryS27YNosC8DoFPaZyidHAetBqu/MwTqwHCo3FsmHGVPEeQRKpXQqn6uWe52nXGuIPYbQmvPy8zVDorGoVPmRB6LH7kMQhg0NpOemIoKYEhxUlytnLCZmnk2ey1nRaOkeCWUo9sYBH9HcfT7uUGfqQ3PfgmymlzLkOL4BahUdaMghZ3lMg="
+      # In seconds
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days

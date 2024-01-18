@@ -1,0 +1,54 @@
+04:20:05.756 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 40416 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+04:20:05.758 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+04:20:06.259 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+04:20:06.311 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+04:20:06.698 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+04:20:06.705 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+04:20:06.706 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+04:20:06.707 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+04:20:06.759 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+04:20:06.759 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 968 ms
+04:20:06.871 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+04:20:06.918 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+04:20:06.946 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+04:20:07.150 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+04:20:07.173 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+04:20:07.319 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@63dc3420
+04:20:07.320 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+04:20:07.349 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+04:20:08.116 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+04:20:08.132 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.132 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+04:20:08.132 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.132 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+04:20:08.133 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.133 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+04:20:08.133 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.133 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+04:20:08.133 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.134 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+04:20:08.134 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.134 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+04:20:08.135 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.135 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+04:20:08.135 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:20:08.135 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+04:20:08.170 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+04:20:08.383 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+04:20:08.672 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+04:20:08.683 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 921f45db-30c6-4d91-a5a3-7e75de7257a0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+04:20:08.890 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@340f4723, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6193a9e2, org.springframework.security.web.context.SecurityContextHolderFilter@2197990b, org.springframework.security.web.header.HeaderWriterFilter@140449d9, org.springframework.security.web.authentication.logout.LogoutFilter@3b75b7b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63b0aeb1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75b5d09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@347074a9, org.springframework.security.web.access.ExceptionTranslationFilter@5b076d23, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2eebb07]
+04:20:09.040 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+04:20:09.056 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+04:20:09.063 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 3.749 seconds (process running for 4.205)
+04:20:19.258 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+04:20:19.259 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+04:20:19.260 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+04:23:16.851 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+04:23:16.867 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+04:23:16.869 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

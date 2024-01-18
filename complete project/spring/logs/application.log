@@ -1,0 +1,653 @@
+04:23:18.748 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 30296 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+04:23:18.750 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+04:23:19.246 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+04:23:19.298 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+04:23:19.684 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+04:23:19.691 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+04:23:19.693 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+04:23:19.693 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+04:23:19.740 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+04:23:19.740 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 958 ms
+04:23:19.850 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+04:23:19.898 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+04:23:19.925 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+04:23:20.123 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+04:23:20.144 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+04:23:20.271 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26463a6
+04:23:20.273 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+04:23:20.302 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+04:23:21.087 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+04:23:21.103 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.104 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+04:23:21.104 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.104 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+04:23:21.105 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.105 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+04:23:21.105 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.105 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+04:23:21.105 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.105 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+04:23:21.106 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.106 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+04:23:21.107 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.107 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+04:23:21.107 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+04:23:21.107 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+04:23:21.141 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+04:23:21.362 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+04:23:21.660 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+04:23:21.672 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 824da3fb-6f62-495e-a75c-d6b53b0369ac
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+04:23:21.883 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1626612d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@542aba71, org.springframework.security.web.context.SecurityContextHolderFilter@78fcc4ef, org.springframework.security.web.header.HeaderWriterFilter@78854721, org.springframework.security.web.authentication.logout.LogoutFilter@38bce2ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17287458, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7296675e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4951dc8c, org.springframework.security.web.access.ExceptionTranslationFilter@ab5d5c8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4158b72f]
+04:23:22.041 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+04:23:22.059 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+04:23:22.067 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 3.776 seconds (process running for 4.292)
+04:23:36.631 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+04:23:36.631 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+04:23:36.632 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+04:23:58.109 [http-nio-8000-exec-4] INFO  c.e.c.s.InsurancePolicyServiceImpl - Inside getPolicyById method of InsurancePolicyServiceImpl
+04:24:20.701 [http-nio-8000-exec-5] INFO  c.e.c.s.InsurancePolicyServiceImpl - Inside getPolicyById method of InsurancePolicyServiceImpl
+04:24:21.429 [http-nio-8000-exec-6] INFO  c.e.c.s.InsurancePolicyServiceImpl - Inside getPolicyById method of InsurancePolicyServiceImpl
+04:24:22.271 [http-nio-8000-exec-7] INFO  c.e.c.s.InsurancePolicyServiceImpl - Inside getPolicyById method of InsurancePolicyServiceImpl
+04:24:23.041 [http-nio-8000-exec-8] INFO  c.e.c.s.InsurancePolicyServiceImpl - Inside getPolicyById method of InsurancePolicyServiceImpl
+04:28:36.198 [http-nio-8000-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22001
+04:28:36.199 [http-nio-8000-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: value too long for type character varying(1)
+04:28:36.207 [http-nio-8000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: value too long for type character varying(1)] [insert into insurance_policy (claim_limit,insurance_type,policy_end_date,policy_start_date,policy_term,remaining_claim_limit,employeeid,insuranceid) values (?,?,?,?,?,?,?,?)]; SQL [insert into insurance_policy (claim_limit,insurance_type,policy_end_date,policy_start_date,policy_term,remaining_claim_limit,employeeid,insuranceid) values (?,?,?,?,?,?,?,?)]] with root cause
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(1)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:107)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:40)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:52)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:175)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2873)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:104)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1423)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:504)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2339)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1996)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:561)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:669)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:419)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249)
+	at jdk.proxy2/jdk.proxy2.$Proxy130.save(Unknown Source)
+	at com.example.complete.service.InsurancePolicyServiceImpl.createPolicy(InsurancePolicyServiceImpl.java:24)
+	at com.example.complete.controller.InsurancePolicyController.createPolicy(InsurancePolicyController.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:117)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:83)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:225)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+05:50:56.721 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+05:50:56.757 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+05:50:56.762 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+05:52:58.199 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 21780 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+05:52:58.201 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+05:52:58.884 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05:52:58.941 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+05:52:59.332 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+05:52:59.339 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+05:52:59.340 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+05:52:59.340 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+05:52:59.388 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+05:52:59.388 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1154 ms
+05:52:59.499 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+05:52:59.545 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+05:52:59.573 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+05:52:59.766 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+05:52:59.787 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+05:52:59.914 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75cacb3e
+05:52:59.915 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+05:52:59.946 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:53:00.762 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+05:53:00.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+05:53:00.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+05:53:00.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+05:53:00.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+05:53:00.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+05:53:00.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+05:53:00.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.781 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+05:53:00.781 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.781 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+05:53:00.781 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.781 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+05:53:00.782 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.782 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+05:53:00.782 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:53:00.782 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+05:53:00.824 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05:53:01.079 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'JwtAuthenticationFilter': No qualifying bean of type 'com.example.complete.config.JwtAuthenticationFilter' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+05:53:01.080 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+05:53:01.097 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+05:53:01.099 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+05:53:01.100 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+05:53:01.110 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+05:53:01.128 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field JwtAuthenticationFilter in com.example.complete.config.SecurityConfig required a bean of type 'com.example.complete.config.JwtAuthenticationFilter' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.complete.config.JwtAuthenticationFilter' in your configuration.
+
+05:54:26.369 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 14932 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+05:54:26.371 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+05:54:26.888 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05:54:26.943 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+05:54:27.336 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+05:54:27.343 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+05:54:27.344 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+05:54:27.345 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+05:54:27.395 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+05:54:27.395 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 991 ms
+05:54:27.486 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+05:54:27.532 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+05:54:27.560 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+05:54:27.760 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+05:54:27.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+05:54:27.912 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a4e939a
+05:54:27.913 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+05:54:27.942 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:54:28.783 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+05:54:28.798 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.798 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+05:54:28.798 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.798 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+05:54:28.799 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.799 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+05:54:28.799 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.799 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+05:54:28.800 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.800 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+05:54:28.800 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.800 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+05:54:28.801 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.801 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+05:54:28.801 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.801 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+05:54:28.802 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.802 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+05:54:28.802 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.802 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+05:54:28.802 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:54:28.802 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+05:54:28.843 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05:54:29.075 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+05:54:29.522 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05:54:29.715 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e6a74fe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d594a5a, org.springframework.security.web.context.SecurityContextHolderFilter@27ae8ce3, org.springframework.security.web.header.HeaderWriterFilter@50ca509b, org.springframework.security.web.authentication.logout.LogoutFilter@735ed1d2, com.example.complete.config.JwtAuthenticationFilter@1b47e09c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@597050fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7511e348, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77199818, org.springframework.security.web.session.SessionManagementFilter@f1a5005, org.springframework.security.web.access.ExceptionTranslationFilter@5a637c4f, org.springframework.security.web.access.intercept.AuthorizationFilter@6a4f3df4]
+05:54:29.861 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+05:54:29.876 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+05:54:29.883 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 3.949 seconds (process running for 4.398)
+05:54:51.928 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+05:54:51.928 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+05:54:51.929 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+05:56:07.596 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+05:56:07.615 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+05:56:07.617 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+05:56:11.028 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 16288 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+05:56:11.029 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+05:56:11.547 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05:56:11.605 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+05:56:11.991 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+05:56:11.998 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+05:56:12.000 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+05:56:12.000 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+05:56:12.046 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+05:56:12.047 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms
+05:56:12.137 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+05:56:12.184 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+05:56:12.213 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+05:56:12.415 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+05:56:12.437 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+05:56:12.663 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@323e026d
+05:56:12.665 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+05:56:12.694 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+05:56:13.522 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+05:56:13.538 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.538 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+05:56:13.538 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.538 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+05:56:13.539 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.539 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+05:56:13.539 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.539 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+05:56:13.539 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.539 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+05:56:13.540 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.540 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+05:56:13.540 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.540 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+05:56:13.541 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.541 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+05:56:13.541 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.541 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+05:56:13.542 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.542 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+05:56:13.542 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+05:56:13.542 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+05:56:13.581 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05:56:13.800 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+05:56:14.230 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05:56:14.412 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ddca64d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d39797a, org.springframework.security.web.context.SecurityContextHolderFilter@4f4c3934, org.springframework.security.web.header.HeaderWriterFilter@6d0ef6dc, org.springframework.security.web.authentication.logout.LogoutFilter@72216f0b, com.example.complete.config.JwtAuthenticationFilter@4d00b076, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2954be42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c65d5c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6bc6400e, org.springframework.security.web.session.SessionManagementFilter@2c34c819, org.springframework.security.web.access.ExceptionTranslationFilter@17563b82, org.springframework.security.web.access.intercept.AuthorizationFilter@222e4377]
+05:56:14.560 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+05:56:14.575 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+05:56:14.582 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 3.987 seconds (process running for 4.438)
+05:56:20.018 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+05:56:20.018 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+05:56:20.019 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+05:56:38.712 [http-nio-8000-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22001
+05:56:38.712 [http-nio-8000-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: value too long for type character varying(20)
+06:00:14.159 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06:00:14.178 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06:00:14.180 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06:00:17.665 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 26272 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+06:00:17.667 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+06:00:18.189 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06:00:18.244 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+06:00:18.635 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+06:00:18.642 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+06:00:18.644 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06:00:18.644 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+06:00:18.693 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06:00:18.693 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 993 ms
+06:00:18.782 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06:00:18.828 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+06:00:18.857 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:00:19.057 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06:00:19.078 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06:00:19.206 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42576db9
+06:00:19.208 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06:00:19.236 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06:00:20.065 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06:00:20.081 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.081 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+06:00:20.081 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.081 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+06:00:20.082 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.082 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+06:00:20.082 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.082 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+06:00:20.083 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.083 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+06:00:20.083 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.083 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+06:00:20.084 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.084 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+06:00:20.084 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.084 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+06:00:20.085 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.085 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+06:00:20.085 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.085 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+06:00:20.085 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:00:20.086 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+06:00:20.126 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06:00:20.351 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+06:00:20.795 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06:00:20.985 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f25176a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f8a0d7f, org.springframework.security.web.context.SecurityContextHolderFilter@2a70c8d5, org.springframework.security.web.header.HeaderWriterFilter@19a48bde, org.springframework.security.web.authentication.logout.LogoutFilter@297840d7, com.example.complete.config.JwtAuthenticationFilter@51ce8293, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2936f48a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f1a5005, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26df4e2f, org.springframework.security.web.session.SessionManagementFilter@3e6f3ad5, org.springframework.security.web.access.ExceptionTranslationFilter@29b21fa6, org.springframework.security.web.access.intercept.AuthorizationFilter@a9b5c85]
+06:00:21.128 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+06:00:21.142 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+06:00:21.149 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 3.912 seconds (process running for 4.359)
+06:00:25.096 [http-nio-8000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:00:25.096 [http-nio-8000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06:00:25.097 [http-nio-8000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+06:03:01.444 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06:03:01.466 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06:03:01.471 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06:03:04.952 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 31400 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+06:03:04.954 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+06:03:05.478 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06:03:05.538 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+06:03:05.940 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+06:03:05.947 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+06:03:05.948 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06:03:05.948 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+06:03:05.997 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06:03:05.998 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1009 ms
+06:03:06.093 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06:03:06.141 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+06:03:06.172 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:03:06.373 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06:03:06.394 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06:03:06.520 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@353b0719
+06:03:06.522 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06:03:06.550 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06:03:07.437 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06:03:07.454 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.455 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+06:03:07.455 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.455 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+06:03:07.456 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.456 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+06:03:07.456 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.456 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+06:03:07.457 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.457 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+06:03:07.457 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.457 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+06:03:07.458 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.458 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+06:03:07.458 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.458 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+06:03:07.459 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.459 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+06:03:07.459 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.459 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+06:03:07.460 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:03:07.460 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+06:03:07.511 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06:03:07.790 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+06:03:08.255 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06:03:08.436 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4298e4b4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e6a74fe, org.springframework.security.web.context.SecurityContextHolderFilter@39a2adf9, org.springframework.security.web.header.HeaderWriterFilter@312cc16b, org.springframework.security.web.authentication.logout.LogoutFilter@7049d079, com.example.complete.config.JwtAuthenticationFilter@4e1349cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a696a6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@597050fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d594a5a, org.springframework.security.web.session.SessionManagementFilter@2936f48a, org.springframework.security.web.access.ExceptionTranslationFilter@6724f10e, org.springframework.security.web.access.intercept.AuthorizationFilter@26df4e2f]
+06:03:08.587 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+06:03:08.601 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+06:03:08.607 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 4.108 seconds (process running for 4.567)
+06:03:11.396 [http-nio-8000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:03:11.396 [http-nio-8000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06:03:11.397 [http-nio-8000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+06:04:17.942 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06:04:17.961 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06:04:17.964 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06:04:19.801 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 20720 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+06:04:19.803 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+06:04:20.353 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06:04:20.413 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+06:04:20.839 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+06:04:20.846 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+06:04:20.847 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06:04:20.847 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+06:04:20.898 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06:04:20.898 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1060 ms
+06:04:20.989 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06:04:21.037 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+06:04:21.067 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:04:21.267 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06:04:21.290 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06:04:21.424 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a4e939a
+06:04:21.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06:04:21.453 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06:04:22.303 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06:04:22.319 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.319 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+06:04:22.319 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.319 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+06:04:22.320 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.320 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+06:04:22.320 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.320 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+06:04:22.321 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.321 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+06:04:22.321 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.321 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+06:04:22.322 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.322 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+06:04:22.322 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.322 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+06:04:22.322 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.323 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+06:04:22.323 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.323 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+06:04:22.323 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:04:22.323 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+06:04:22.363 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06:04:22.603 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+06:04:23.087 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06:04:23.280 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e6a74fe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d594a5a, org.springframework.security.web.context.SecurityContextHolderFilter@27ae8ce3, org.springframework.security.web.header.HeaderWriterFilter@50ca509b, org.springframework.security.web.authentication.logout.LogoutFilter@735ed1d2, com.example.complete.config.JwtAuthenticationFilter@1b47e09c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@597050fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7511e348, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77199818, org.springframework.security.web.session.SessionManagementFilter@f1a5005, org.springframework.security.web.access.ExceptionTranslationFilter@5a637c4f, org.springframework.security.web.access.intercept.AuthorizationFilter@6a4f3df4]
+06:04:23.431 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+06:04:23.446 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+06:04:23.453 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 4.098 seconds (process running for 4.561)
+06:04:26.223 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:04:26.223 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06:04:26.224 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+06:04:40.395 [http-nio-8000-exec-4] WARN  o.s.s.c.b.BCryptPasswordEncoder - Empty encoded password
+06:06:47.815 [http-nio-8000-exec-9] WARN  o.s.s.c.b.BCryptPasswordEncoder - Empty encoded password
+06:07:24.246 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06:07:24.268 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06:07:24.271 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06:07:27.556 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 30060 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+06:07:27.558 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+06:07:28.077 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06:07:28.135 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+06:07:28.519 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+06:07:28.526 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+06:07:28.527 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06:07:28.528 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+06:07:28.574 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06:07:28.574 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 984 ms
+06:07:28.663 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06:07:28.711 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+06:07:28.739 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:07:28.938 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06:07:28.960 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06:07:29.087 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@323e026d
+06:07:29.088 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06:07:29.116 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06:07:29.945 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06:07:29.960 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.960 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+06:07:29.961 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.961 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+06:07:29.961 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.961 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+06:07:29.962 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.962 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+06:07:29.962 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.962 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+06:07:29.962 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.962 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+06:07:29.963 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.963 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+06:07:29.963 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.963 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+06:07:29.964 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.964 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+06:07:29.964 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.964 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+06:07:29.965 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:07:29.965 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+06:07:30.007 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06:07:30.227 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+06:07:30.650 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06:07:30.832 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ddca64d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d39797a, org.springframework.security.web.context.SecurityContextHolderFilter@4f4c3934, org.springframework.security.web.header.HeaderWriterFilter@6d0ef6dc, org.springframework.security.web.authentication.logout.LogoutFilter@72216f0b, com.example.complete.config.JwtAuthenticationFilter@4d00b076, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2954be42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c65d5c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6bc6400e, org.springframework.security.web.session.SessionManagementFilter@2c34c819, org.springframework.security.web.access.ExceptionTranslationFilter@17563b82, org.springframework.security.web.access.intercept.AuthorizationFilter@222e4377]
+06:07:30.981 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+06:07:30.995 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+06:07:31.003 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 3.874 seconds (process running for 4.317)
+06:08:00.834 [http-nio-8000-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:08:00.834 [http-nio-8000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06:08:00.835 [http-nio-8000-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+06:09:31.533 [http-nio-8000-exec-4] WARN  o.s.s.c.b.BCryptPasswordEncoder - Empty encoded password
+06:12:48.533 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06:12:48.554 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06:12:48.557 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06:12:52.070 [main] INFO  c.e.complete.CompleteApplication - Starting CompleteApplication using Java 17.0.9 with PID 21132 (C:\Users\Ben\Desktop\guides\complete project\spring\target\classes started by Ben in C:\Users\Ben\Desktop\guides\complete project\spring)
+06:12:52.072 [main] INFO  c.e.complete.CompleteApplication - No active profile set, falling back to 1 default profile: "default"
+06:12:52.593 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06:12:52.648 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+06:12:53.040 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+06:12:53.047 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+06:12:53.048 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06:12:53.048 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.17]
+06:12:53.099 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06:12:53.099 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 995 ms
+06:12:53.188 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06:12:53.235 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+06:12:53.265 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:12:53.473 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06:12:53.495 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06:12:53.626 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a4e939a
+06:12:53.627 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06:12:53.657 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06:12:54.500 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06:12:54.515 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.515 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_claim" does not exist, skipping
+06:12:54.515 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.516 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "insurance_policy" does not exist, skipping
+06:12:54.516 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.516 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "token" does not exist, skipping
+06:12:54.516 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.516 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "_user" does not exist, skipping
+06:12:54.517 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.517 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_claim" does not exist, skipping
+06:12:54.517 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.517 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "insurance_policy" does not exist, skipping
+06:12:54.518 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.518 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "token" does not exist, skipping
+06:12:54.518 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.518 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "_user_seq" does not exist, skipping
+06:12:54.519 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.519 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_claim_seq" does not exist, skipping
+06:12:54.519 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.519 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "insurance_policy_seq" does not exist, skipping
+06:12:54.520 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+06:12:54.520 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - sequence "token_seq" does not exist, skipping
+06:12:54.560 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06:12:54.784 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+06:12:55.227 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06:12:55.418 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e6a74fe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d594a5a, org.springframework.security.web.context.SecurityContextHolderFilter@27ae8ce3, org.springframework.security.web.header.HeaderWriterFilter@50ca509b, org.springframework.security.web.authentication.logout.LogoutFilter@735ed1d2, com.example.complete.config.JwtAuthenticationFilter@1b47e09c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@597050fa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7511e348, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77199818, org.springframework.security.web.session.SessionManagementFilter@f1a5005, org.springframework.security.web.access.ExceptionTranslationFilter@5a637c4f, org.springframework.security.web.access.intercept.AuthorizationFilter@6a4f3df4]
+06:12:55.567 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+06:12:55.582 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path ''
+06:12:55.589 [main] INFO  c.e.complete.CompleteApplication - Started CompleteApplication in 3.961 seconds (process running for 4.42)
+06:13:04.037 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:13:04.037 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06:13:04.038 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+06:13:56.887 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06:13:56.907 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06:13:56.909 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

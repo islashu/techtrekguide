@@ -12,6 +12,9 @@ git clone <git url>
 e.g. git clone https://github.com/islashu/techtrekguide.git
 try using https instead of SSH
 
+(if you are using jetbrains ide and the gui for git is not showing at the bottom right hand corner, alt+ 0 -> create new git repo)
+or run git init and restart the IDE
+
 ### Getting the latest information from a remote repository
 ```
 git pull <git url> <branch>

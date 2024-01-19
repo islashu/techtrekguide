@@ -9,8 +9,8 @@ const router = express.Router();
 router.post('/login',  handleLogin)
 
 router.post('/register', handleRegister)
-router.post('/test', [passport.authenticate('jwt', {session: false, failWithError: true}), authErrorHandler], (req: Request, res: Response, next: NextFunction) => {
-    return res.status(200).json({message: "protected route accessed!!"})
+router.get('/test',  (req: Request, res: Response, next: NextFunction) => {
+    return res.status(200).json(["hello", "something", "thing is fine", "new item", "new item 2"])
 });
 
 export default  router;

@@ -4,8 +4,10 @@ import globalErrorHandler from "./error/globalErrorHandler";
 require('dotenv').config();
 import cors from "cors";
 import express from "express";
-import corsOptions from "./config/cors/corsOptions";
+const corsOptions = require('./config/cors/corsOptions');
 import passport from "passport";
+const cookieParser = require('cookie-parser');
+const credentials = require('./config/cors/credentials.middleware'); // middleware for cors
 // initialise configuration of passport strategy class
 import authenticationRoutes from "./routes/authenticationRoutes";
 import userRoutes from './routes/userRoutes';
@@ -15,8 +17,9 @@ import { logger } from "./config/winston logger/logger";
 const PORT = process.env.PORT;
 const app = express();
 
-
 // Standard middlewares
+app.use(cookieParser());
+app.use(credentials);
 app.use(cors(corsOptions));
 app.use(express.json());
 // Create the passport strategy object

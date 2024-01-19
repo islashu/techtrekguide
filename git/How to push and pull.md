@@ -104,3 +104,29 @@ git config --global user.email "Your email"
 If after setting your git details and you still cannot push, the repo owner may need to add you as a collaborator to the repo.
 
 
+### Accidental commits but want to keep the files, maybe due to committing wrong files or wrong message
+```
+Undo commit, do not revert commit
+
+git reset --soft HEAD~1 (leave files and all the files added as they are as if before commit) or 
+git reset HEAD~1 (leave files as they are as if before commit, files previous git add . need to be added again)
+```
+
+### If you want reset your branch to a previous version and throw away all changes like to start a new (as if you didn't even code out anything since you started the branch)
+```
+git reset --hard HEAD~1
+```
+
+### If you need the commit that you just deleted
+```
+git reflog
+```
+
+### git revert vs git reset
+```
+Very similar interms of destroying the existing and uncommitted changes but 
+git reset change existing commit history, git revert adds on a new commit history
+```
+
+For more info: https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git
+

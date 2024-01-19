@@ -20,6 +20,8 @@ model User {
   age               Int               @map("Age")
   insurancePolicies InsurancePolicy[]
   accessToken       String?           @map("AccessToken") @db.VarChar(255)
+
+  @@index([userEmail], name: "UserEmail")
 }
 
 model InsurancePolicy {
@@ -32,11 +34,12 @@ model InsurancePolicy {
   remainingClaimLimit Float    @default(0) @map("RemainingClaimLimit")
 
   // This is the column name for which to store the FK, This way of describing the schema is very similar to spring
-  insuranceUserId Int
+  // Remember to add the ? to make it optional since an insurance policy can exist without a user and can be connected later
+  insuranceUserId Int?
   // This describes the relationship only
-  user            User @relation(fields: [insuranceUserId], references: [userId])
+  user            User? @relation(fields: [insuranceUserId], references: [userId])
 
-  // One to Many
+  // One to Man
   insuranceClaims InsuranceClaim[]
 }
 
@@ -53,6 +56,6 @@ model InsuranceClaim {
   LastEditedClaimDate DateTime
 
   // Many to one
-  policyId        Int
-  insurancePolicy InsurancePolicy @relation(fields: [policyId], references: [insuranceId])
+  policyId        Int?
+  insurancePolicy InsurancePolicy? @relation(fields: [policyId], references: [insuranceId])
 }

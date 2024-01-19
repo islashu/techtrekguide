@@ -1,9 +1,10 @@
 import {InsurancePolicy, PrismaClient, User} from "@prisma/client";
 
-const prisma = new PrismaClient({});
+export const prisma = new PrismaClient({});
 
 // Include base methods only
 export const createUser = async (firstName :string, lastName :string, age: number , email:string, password:string): Promise<User> => {
+    // Creating a user
     const user: User= await prisma.user.create({
         data: {
             userEmail: email,
@@ -12,6 +13,10 @@ export const createUser = async (firstName :string, lastName :string, age: numbe
             lastName: lastName,
             age: age,
             insurancePolicies: {}
+        },
+        include: {
+            // Include a certain relationship data
+            insurancePolicies: true
         }
     })
     return user
